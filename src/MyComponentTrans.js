@@ -1,45 +1,28 @@
-import React,{useState} from 'react';
+import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
+import image from './sea.jpg'
 
-export function MyComponentTrans() {
-    const [input, setInput] = useState("");
-    const[responseData, setResponseData] = useState([]);
+const sea = {
+  width: '100%',
+  height: '800px',
+
+  margin: '0',
+  backgroundImage: 'url('+image+')',
+  backgroundSize: 'cover'
+}
+
+export function MyComponentTrans(props) {
   
-    function onClick() {
-        const requestOptions = {
-          method: 'POST',
-          body:   JSON.stringify({text:input})
-        };
-        fetch("https://api.funtranslations.com/translate/pirate.json", requestOptions)
-        .then(response => response.json())
-        .then(data => setResponseData(data));
-    };  
+  return (
+    <div style = {sea}>
+      <br />
+      <br />
+      <br />
+
+
+      <h2>{props.pirate}</h2>     
     
-    return (
-           <div>
-<Container fluid >
-        <Row>
-        <Col>
-        <header>
-        <h1>Arrr.. talk like me you scurvy dog!</h1>
-        </header>
-        <br />
-      <div className="text">
-        <input
-          type="text"
-          value={input}
-          onChange={e => setInput(e.target.value)}
-          placeholder="Normal text"
-        />   
-      </div>
-      <br />
-      <button onClick={onClick}>Jim, lad!</button>
-      <br />
-      <h2>{responseData}</h2>
-        </Col>
-        </Row>
-      </Container>
-      <br />     
-            </div> 
+    
+    </div> 
         );
     }
