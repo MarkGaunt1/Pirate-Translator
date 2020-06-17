@@ -79,7 +79,7 @@ function App() {
       <br />
       <br />
       <br />        
-      <button onClick={onClick}>Jim, lad!</button>
+      <button onClick={onClick}>Jim, lad! </button>
       <br />
       </div>
       <MyComponentTrans pirate = {pirate} />
