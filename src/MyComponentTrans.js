@@ -1,11 +1,11 @@
 import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
-import image from './sea.jpg'
+import image from './map.jpg'
 
-const sea = {
+const map = {
   width: '100%',
   height: '800px',
-
+  color: 'red',
   margin: '0',
   backgroundImage: 'url('+image+')',
   backgroundSize: 'cover'
@@ -14,7 +14,7 @@ const sea = {
 export function MyComponentTrans(props) {
   
   return (
-    <div style = {sea}>
+    <div style = {map}>
       <br />
       <br />
       <br />

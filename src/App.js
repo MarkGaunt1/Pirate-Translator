@@ -7,7 +7,7 @@ import image from './pirate.jpg';
 
 const styles = {
   width: '100%',
-  height: '800px',
+  height: '900px',
   color: 'white',
   margin: '0',
   backgroundImage: 'url('+image+')',
@@ -49,7 +49,7 @@ function App() {
         <header>
          
           <br />
-          <h1>So, you wanty to talk like me you scurvy dog!</h1>
+          <h1>So, you want to talk like me you scurvy dog!</h1>
           <br />
           
           <h3>Just type below and then click the "Jim Lad!" button to be just like Long John!</h3>
@@ -57,16 +57,7 @@ function App() {
         </header>
         <br />
         <br />
-        
-        <div className="text">
-        <input
-          type="text"
-          value={input}
-          onChange={e => setInput(e.target.value)}
-          placeholder="Type here you, dog!"
-        />   
-      </div>
-      <br />
+        <br />
       <br />
       <br />
       <br />
@@ -78,7 +69,23 @@ function App() {
       <br />
       <br />
       <br />
-      <br />        
+      <br />       
+      <br /> 
+      <br />
+      <br />
+      <br />
+        
+        <div className="text">
+        <input
+          type="text"
+          value={input}
+          onChange={e => setInput(e.target.value)}
+          placeholder="Type here you, dog!"
+        />   
+      </div>
+
+      <br />
+      
       <button onClick={onClick}>Jim, lad! </button>
       <br />
       </div>
